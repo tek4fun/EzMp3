@@ -84,6 +84,7 @@ class TableViewLocal: UIViewController, UITableViewDelegate, UITableViewDataSour
         let audioPlay = AudioPlayer.sharedInstance
         audioPlay.pathString = listSongs[indexPath.row].sourceLocal
         audioPlay.titleSong = listSongs[indexPath.row].title + "(\(listSongs[indexPath.row].artistName))"
+        audioPlay.lyric = listSongs[indexPath.row].lyric
         audioPlay.setupAudio()
         NotificationCenter.default.post(name: Notification.Name(rawValue: "setupObserverAudio"),object: nil)
     }

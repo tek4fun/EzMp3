@@ -15,8 +15,8 @@ class AudioPlayerView: UIViewController, AVAudioPlayerDelegate {
     var animator: UIDynamicAnimator!
     var attachmentBehavior : UIAttachmentBehavior!
     var snapBehavior : UISnapBehavior!
-
     let audioPlayer = AudioPlayer.sharedInstance
+
     @IBOutlet weak var lbl_Title: UILabel!
     @IBOutlet weak var sld_Volume: UISlider!
     @IBOutlet weak var sld_Duration: UISlider!
@@ -24,7 +24,7 @@ class AudioPlayerView: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var lbl_CurrentTime: UILabel!
     @IBOutlet weak var btn_Play: UIButton!
     var checkAddObserverAudio = false
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         btn_Play.isEnabled = false
@@ -105,7 +105,6 @@ class AudioPlayerView: UIViewController, AVAudioPlayerDelegate {
     // alert
 
     func createOverlay() {
-
         overlayView = UIView(frame: view.bounds)
         overlayView.backgroundColor = UIColor.gray
         overlayView.alpha = 0.0
@@ -115,9 +114,9 @@ class AudioPlayerView: UIViewController, AVAudioPlayerDelegate {
     func createAlert() {
 
         let alertWidth: CGFloat = 375
-        let alertHeight: CGFloat = 150
+        let alertHeight: CGFloat = 150+100
         let buttonWidth: CGFloat = 40
-        let alertViewFrame: CGRect = CGRect(x: 0, y: 0, width: alertWidth, height: alertHeight)
+        let alertViewFrame: CGRect = CGRect(x: 0, y: -100, width: alertWidth, height: alertHeight)
         alertView = UIView(frame: alertViewFrame)
         alertView.backgroundColor = UIColor.white
         alertView.alpha = 0.0
@@ -127,21 +126,20 @@ class AudioPlayerView: UIViewController, AVAudioPlayerDelegate {
         alertView.layer.shadowOpacity = 0.3;
         alertView.layer.shadowRadius = 10.0;
 
-
+        //create Close Button
         let button = UIButton(type: .custom)
         button.setImage(UIImage(named: "Dismiss.png"), for: UIControlState())
         button.backgroundColor = UIColor.clear
-        button.frame = CGRect(x: alertWidth/2 - buttonWidth/2, y: -buttonWidth/2, width: buttonWidth, height: buttonWidth)
-
+        button.frame = CGRect(x: alertWidth/2 - buttonWidth/2, y: alertHeight - buttonWidth/2, width: buttonWidth, height: buttonWidth)
         button.addTarget(self, action: #selector(AudioPlayerView.dismissAlert), for: UIControlEvents.touchUpInside)
 
-        let rectLabel = CGRect(x: 0, y: button.frame.origin.y + button.frame.height, width: alertWidth, height: alertHeight - buttonWidth/2)
-        let label = UILabel(frame: rectLabel)
-        label.numberOfLines = 0
-        label.font = UIFont.boldSystemFont(ofSize: 18)
+        //create Text View
+        let rectLabel = CGRect(x: 0, y: alertView.bounds.minY , width: alertWidth, height: alertHeight - buttonWidth/2)
+        let label = UITextView(frame: rectLabel)
         label.text = audioPlayer.lyric
+        label.contentMode = .scaleToFill
         label.textAlignment = .center
-
+        label.isEditable = false
         alertView.addSubview(label)
         alertView.addSubview(button)
         view.addSubview(alertView)
@@ -171,7 +169,7 @@ class AudioPlayerView: UIViewController, AVAudioPlayerDelegate {
                 self.alertView.removeFromSuperview()
                 self.alertView = nil
         })
-
+        
     }
     
 }

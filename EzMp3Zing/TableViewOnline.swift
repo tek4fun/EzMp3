@@ -23,7 +23,6 @@ class TableViewOnline: UIViewController, UITableViewDelegate,UITableViewDataSour
         getCurrentWeek()
         getCurrentYear()
         getData()
-
     }
 
     @IBAction func actionPreWeek(_ sender: UIButton) {
@@ -33,7 +32,6 @@ class TableViewOnline: UIViewController, UITableViewDelegate,UITableViewDataSour
             currentWeek = 52
             currentYear -= 1
         }
-        print("http://mp3.zing.vn/bang-xep-hang/bai-hat-Viet-Nam/IWZ9Z08I.html?w=\(currentWeek)&y=\(currentYear)")
         listSongs.removeAll()
         getData()
         DispatchQueue.main.async {
@@ -47,7 +45,6 @@ class TableViewOnline: UIViewController, UITableViewDelegate,UITableViewDataSour
             currentWeek = 1
             currentYear += 1
         }
-        print("http://mp3.zing.vn/bang-xep-hang/bai-hat-Viet-Nam/IWZ9Z08I.html?w=\(currentWeek)&y=\(currentYear)")
         listSongs.removeAll()
         getData()
         DispatchQueue.main.async {
@@ -59,22 +56,19 @@ class TableViewOnline: UIViewController, UITableViewDelegate,UITableViewDataSour
     func getData()
     {
 
-        let data = NSData(contentsOf: URL(string: "http://mp3.zing.vn/bang-xep-hang/bai-hat-Viet-Nam/IWZ9Z08I.html?w=\(currentWeek)&y=\(currentYear)")!)
+        let data = NSData(contentsOf: URL(string: "http://mp3.zing.vn/bang-xep-hang/bai-hat-Au-My/IWZ9Z0BW.html?w=\(currentWeek)&y=\(currentYear)")!)
 
         let doc = TFHpple(htmlData: data as Data!)
         if let elements = doc?.search(withXPathQuery: "//h3[@class='title-item']/a") as? [TFHppleElement]
         {
 
-//            for element in elements
-//            {
+            for element in elements
+            {
                 DispatchQueue.global(qos: .default).async(execute: {
-                    let id = "ZWZ97W7I" //self.getID(path: element.object(forKey: "href") as NSString)
+                    let id = self.getID(path: element.object(forKey: "href") as NSString)
                     let url = NSURL(string: "http://api.mp3.zing.vn/api/mobile/song/getsonginfo?keycode=fafd463e2131914934b73310aa34a23f&requestdata={\"id\":\"\(id)\"}".addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!)
 
                     let lyric = NSURL(string: "http://api.mp3.zing.vn/api/mobile/song/getlyrics?keycode=fafd463e2131914934b73310aa34a23f&requestdata={\"id\":\"\(id)\"}".addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!)
-
-
-
                     var stringData = ""
                     var lyricData = ""
                     do {
@@ -87,13 +81,12 @@ class TableViewOnline: UIViewController, UITableViewDelegate,UITableViewDataSour
                     }
                     let json = self.convertStringToDictionary(text: stringData)
                     let lyricJson = self.convertStringToDictionary(text: lyricData)
-                    print(lyricJson)
                     if (json != nil)
                     {
                         self.addSongToList(json!, lyricJson!)
                     }
                 })
-            //}
+            }
         }
     }
 
@@ -105,7 +98,7 @@ class TableViewOnline: UIViewController, UITableViewDelegate,UITableViewDataSour
     }
     func getCurrentWeek() {
         // get week
-        let data = NSData(contentsOf: URL(string: "http://mp3.zing.vn/bang-xep-hang/bai-hat-Viet-Nam/IWZ9Z08I.html")!)
+        let data = NSData(contentsOf: URL(string: "http://mp3.zing.vn/bang-xep-hang/bai-hat-Au-My/IWZ9Z0BW.html")!)
         let doc = TFHpple(htmlData: data as Data!)
 
         //split week number from String
@@ -226,7 +219,7 @@ class TableViewOnline: UIViewController, UITableViewDelegate,UITableViewDataSour
         edit.backgroundColor = UIColor(red: 248/255, green: 55/255, blue: 186/255, alpha: 1.0)
         return [edit]
     }
-
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80.0
     }
