@@ -14,7 +14,6 @@
 		1E3485031E4DB96400E9F889 /* duration.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3484F81E4DB96400E9F889 /* duration.png */; };
 		1E3485041E4DB96400E9F889 /* iconDownload.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3484F91E4DB96400E9F889 /* iconDownload.png */; };
 		1E3485051E4DB96400E9F889 /* iconDownload@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3484FA1E4DB96400E9F889 /* iconDownload@1x.png */; };
-		1E3485061E4DB96400E9F889 /* iconOnline.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3484FB1E4DB96400E9F889 /* iconOnline.png */; };
 		1E3485071E4DB96400E9F889 /* iconOnline@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3484FC1E4DB96400E9F889 /* iconOnline@1x.png */; };
 		1E3485081E4DB96400E9F889 /* maxVolume.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3484FD1E4DB96400E9F889 /* maxVolume.png */; };
 		1E3485091E4DB96400E9F889 /* minVolume.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3484FE1E4DB96400E9F889 /* minVolume.png */; };
@@ -34,6 +33,7 @@
 		1EC979FE1E516D5700E66A69 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC979FB1E516D5700E66A69 /* XPathQuery.m */; };
 		1EC97A011E516E0200E66A69 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC97A001E516E0200E66A69 /* libxml2.2.dylib */; };
 		1EC97A031E51ABD900E66A69 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC97A021E51ABD900E66A69 /* Song.swift */; };
+		9170F12E1ED2F7DC00210AB6 /* DetailCellVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9170F12D1ED2F7DC00210AB6 /* DetailCellVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +46,6 @@
 		1E3484F81E4DB96400E9F889 /* duration.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = duration.png; sourceTree = "<group>"; };
 		1E3484F91E4DB96400E9F889 /* iconDownload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconDownload.png; sourceTree = "<group>"; };
 		1E3484FA1E4DB96400E9F889 /* iconDownload@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconDownload@1x.png"; sourceTree = "<group>"; };
-		1E3484FB1E4DB96400E9F889 /* iconOnline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconOnline.png; sourceTree = "<group>"; };
 		1E3484FC1E4DB96400E9F889 /* iconOnline@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconOnline@1x.png"; sourceTree = "<group>"; };
 		1E3484FD1E4DB96400E9F889 /* maxVolume.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maxVolume.png; sourceTree = "<group>"; };
 		1E3484FE1E4DB96400E9F889 /* minVolume.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minVolume.png; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 		1EC979FB1E516D5700E66A69 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		1EC97A001E516E0200E66A69 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = ../../../../usr/lib/libxml2.2.dylib; sourceTree = "<group>"; };
 		1EC97A021E51ABD900E66A69 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		9170F12D1ED2F7DC00210AB6 /* DetailCellVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCellVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,16 +107,13 @@
 			children = (
 				1EC979F31E516D2E00E66A69 /* Hpple */,
 				1E3484F71E4DB8F500E9F889 /* resource */,
+				9170F12B1ED2DFF700210AB6 /* Controller */,
+				9170F12C1ED2E00C00210AB6 /* Model */,
 				1E3484E51E4DB74300E9F889 /* AppDelegate.swift */,
-				1EC979F11E516A6E00E66A69 /* TableViewOnline.swift */,
 				1E3484E91E4DB74300E9F889 /* Main.storyboard */,
 				1E3484EC1E4DB74300E9F889 /* Assets.xcassets */,
 				1E3484EE1E4DB74300E9F889 /* LaunchScreen.storyboard */,
 				1E3484F11E4DB74300E9F889 /* Info.plist */,
-				1EB8E7621E52F49900DC1B54 /* AudioPlayer.swift */,
-				1EC97A021E51ABD900E66A69 /* Song.swift */,
-				1EB8E7601E52C32300DC1B54 /* TableViewLocal.swift */,
-				1EB8E7641E53071900DC1B54 /* AudioPlayerView.swift */,
 			);
 			path = EzMp3Zing;
 			sourceTree = "<group>";
@@ -129,7 +126,6 @@
 				1E3484F91E4DB96400E9F889 /* iconDownload.png */,
 				1E834FFF1E5591E2004817C8 /* mel-carter.png */,
 				1E3484FA1E4DB96400E9F889 /* iconDownload@1x.png */,
-				1E3484FB1E4DB96400E9F889 /* iconOnline.png */,
 				1E3484FC1E4DB96400E9F889 /* iconOnline@1x.png */,
 				1E3484FD1E4DB96400E9F889 /* maxVolume.png */,
 				1E3484FE1E4DB96400E9F889 /* minVolume.png */,
@@ -165,6 +161,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9170F12B1ED2DFF700210AB6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1EB8E7601E52C32300DC1B54 /* TableViewLocal.swift */,
+				1EC979F11E516A6E00E66A69 /* TableViewOnline.swift */,
+				1EB8E7641E53071900DC1B54 /* AudioPlayerView.swift */,
+				1EB8E7621E52F49900DC1B54 /* AudioPlayer.swift */,
+				9170F12D1ED2F7DC00210AB6 /* DetailCellVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		9170F12C1ED2E00C00210AB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1EC97A021E51ABD900E66A69 /* Song.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -192,13 +208,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = tek4fun;
 				TargetAttributes = {
 					1E3484E11E4DB74300E9F889 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 233SMCX45F;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -228,7 +250,6 @@
 				1E34850D1E4DB96400E9F889 /* thumbHightLight.png in Resources */,
 				1E3485051E4DB96400E9F889 /* iconDownload@1x.png in Resources */,
 				1E3484F01E4DB74300E9F889 /* LaunchScreen.storyboard in Resources */,
-				1E3485061E4DB96400E9F889 /* iconOnline.png in Resources */,
 				1E3485071E4DB96400E9F889 /* iconOnline@1x.png in Resources */,
 				1E34850A1E4DB96400E9F889 /* pause.png in Resources */,
 				1E34850B1E4DB96400E9F889 /* play.png in Resources */,
@@ -257,6 +278,7 @@
 				1E3484E61E4DB74300E9F889 /* AppDelegate.swift in Sources */,
 				1EB8E7631E52F49900DC1B54 /* AudioPlayer.swift in Sources */,
 				1EC979FC1E516D5700E66A69 /* TFHpple.m in Sources */,
+				9170F12E1ED2F7DC00210AB6 /* DetailCellVC.swift in Sources */,
 				1EB8E7651E53071900DC1B54 /* AudioPlayerView.swift in Sources */,
 				1EB8E7611E52C32300DC1B54 /* TableViewLocal.swift in Sources */,
 				1EC979FE1E516D5700E66A69 /* XPathQuery.m in Sources */,
@@ -304,6 +326,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -326,7 +349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -354,6 +377,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -370,7 +394,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -384,8 +408,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 233SMCX45F;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = EzMp3Zing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.techmaster.EzMp3Zing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -400,8 +426,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 233SMCX45F;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = EzMp3Zing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.techmaster.EzMp3Zing;
 				PRODUCT_NAME = "$(TARGET_NAME)";

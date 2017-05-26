@@ -11,7 +11,7 @@ import UIKit
 struct Song {
     var title = ""
     var artistName = ""
-    var thumbnail: UIImage
+    var thumbnail = #imageLiteral(resourceName: "music-player")
     var sourceOnline = ""
     var sourceLocal = ""
     var localThumbnail = ""
@@ -23,10 +23,13 @@ struct Song {
         self.artistName = artistName
         let thumbnailURL = baseThumbnail+thumbnail
         let dataImage = try? Data(contentsOf: URL(string: thumbnailURL)!)
-        self.thumbnail = UIImage(data: dataImage!)!
+        if thumbnail != "" {
+            self.thumbnail = UIImage(data: dataImage!)!
+        }
         self.sourceOnline = source
         self.lyric = lyric
     }
+    
     init(title: String, artistName: String, localThumbnail: String, localSource: String, lyric: String){
         self.title = title
         self.artistName = artistName

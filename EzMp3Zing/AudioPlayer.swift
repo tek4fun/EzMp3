@@ -1,10 +1,11 @@
 //
 //  ViewController.swift
-//  Music Player
+//  EzMp3Zing
 //
-//  Created by VietHung on 5/27/16.
-//  Copyright © 2016 VietHung. All rights reserved.
+//  Created by iOS Student on 2/14/17.
+//  Copyright © 2017 tek4fun. All rights reserved.
 //
+
 
 import UIKit
 import AVFoundation
@@ -19,13 +20,17 @@ class AudioPlayer{
     var pathString = ""
     var repeating = false
     var playing = false
+    var shuffling = false
     var duration = Float()
     var currentTime = Float()
     var titleSong = ""
     var lyric = ""
     var player = AVPlayer()
-
-
+    var index = IndexPath()
+    var isOnline = false
+    var totalSong = 0
+    var artist = ""
+    var thumbnail = #imageLiteral(resourceName: "music-player")
     func setupAudio()
     {
        // var url = URL()
@@ -45,7 +50,6 @@ class AudioPlayer{
         player.volume = 0.5
         player.play()
         playing = true
-        repeating = true
     }
     
     
@@ -69,6 +73,16 @@ class AudioPlayer{
             playing = false
         }
     }
+    
+    func actionPlay() {
+        player.play()
+        playing = true
+    }
+    
+    func actionPause() {
+        player.pause()
+        playing = false
+    }
     func sld_Duration(_ value: Float) {
         let timeToSeek = value * duration
         let time = CMTimeMake(Int64(timeToSeek), 1)
@@ -79,7 +93,13 @@ class AudioPlayer{
         player.volume = value
     }
     
-    
+    func shuffle(_ shuffleSong: Bool) {
+        if shuffleSong == true {
+            shuffling = true
+        } else {
+            shuffling = false
+        }
+    }
     
     
     
