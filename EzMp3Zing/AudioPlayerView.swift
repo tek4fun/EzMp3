@@ -29,6 +29,8 @@ class AudioPlayerView: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var lbl_TotalTime: UILabel!
     @IBOutlet weak var lbl_CurrentTime: UILabel!
     @IBOutlet weak var btn_Play: UIButton!
+    
+    
     //var checkAddObserverAudio = false
     
     override func viewDidLoad() {
@@ -39,6 +41,7 @@ class AudioPlayerView: UIViewController, AVAudioPlayerDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(setupObserverAudio), name: NSNotification.Name(rawValue: "setupObserverAudio"), object: nil)
         //createOverlay()
         //createAlert()
+//        audioPlayer.player.addObserver(audioPlayer.player, forKeyPath: "status", options: .new, context: nil)
         
         setBackGroundPlayer()
     }
@@ -159,6 +162,25 @@ class AudioPlayerView: UIViewController, AVAudioPlayerDelegate {
         btn_Play.isEnabled = true
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timeUpdate), userInfo: nil, repeats: true)
         NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidReachEnd(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: audioPlayer.player.currentItem)
+        
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if (keyPath == "status") {
+            if audioPlayer.player.status == .readyToPlay {
+                if !isSetup {
+                    setupNowPlayingInfoCenter()
+                    isSetup = true
+                }
+                lbl_Title.text = audioPlayer.titleSong
+                addThumbImgForButton()
+                btn_Rewind.isEnabled = true
+                btn_Next.isEnabled = true
+                btn_Play.isEnabled = true
+                Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timeUpdate), userInfo: nil, repeats: true)
+                NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidReachEnd(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: audioPlayer.player.currentItem)
+            }
+        }
     }
     
     func playerItemDidReachEnd(_ notification: Notification){
@@ -170,6 +192,7 @@ class AudioPlayerView: UIViewController, AVAudioPlayerDelegate {
                 if audioPlayer.shuffling {
                     NotificationCenter.default.post(name: Notification.Name(rawValue: "shufflingSongs"),object: nil)
                 } else {
+                    audioPlayer.player.seek(to: kCMTimeZero)
                     NotificationCenter.default.post(name: Notification.Name(rawValue: "songDidReachEnd"),object: nil)
                 }
             }
@@ -188,9 +211,10 @@ class AudioPlayerView: UIViewController, AVAudioPlayerDelegate {
     }
     
     func timeUpdate() {
+        audioPlayer.duration = Float((audioPlayer.player.currentItem?.duration.seconds)!)
+        audioPlayer.currentTime = Float(audioPlayer.player.currentTime().seconds)
         
-        audioPlayer.duration = Float((audioPlayer.player.currentItem?.duration.value)!)/Float((audioPlayer.player.currentItem?.duration.timescale)!)
-        audioPlayer.currentTime = Float(audioPlayer.player.currentTime().value)/Float(audioPlayer.player.currentTime().timescale)
+        
         if !isPause {
             self.updateNowPlayingCenter()
         }
@@ -250,6 +274,9 @@ class AudioPlayerView: UIViewController, AVAudioPlayerDelegate {
     @IBAction func actionNext(_ sender: Any) {
         nextSong()
     }
+    @IBAction func actionHideAudioPlayer(_ sender: Any) {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "hideAudioPlayer"),object: nil)
+    }
     
     func playPause() {
         audioPlayer.action_PlayPause()
@@ -258,7 +285,11 @@ class AudioPlayerView: UIViewController, AVAudioPlayerDelegate {
     
     
     func nextSong(){
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "songDidReachEnd"),object: nil)
+        if audioPlayer.isOnline{
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "songDidReachEnd"),object: nil)
+        } else {
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "songDidReachEndLocal"),object: nil)
+        }
     }
     func previousSong(){
         if audioPlayer.isOnline{

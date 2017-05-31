@@ -15,13 +15,20 @@ class TableViewOnline: UIViewController, UITableViewDelegate,UITableViewDataSour
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var lb_Day: UILabel!
     @IBOutlet weak var btn_Next: UIButton!
+    @IBOutlet weak var btn_showAudio: UIButton!
+    
     @IBOutlet weak var view_AudioPlayer: UIView!
+    
+    @IBOutlet weak var constraintHeight: NSLayoutConstraint!
+    
     let actInd = UIActivityIndicatorView()
     var trasFrame = UIView()
+    let showButton = UIButton()
     let audioPlay = AudioPlayer.sharedInstance
     var lastWeek:Int = 0
     var currentWeek:Int = 0
     var currentYear:Int = 0
+    var isUp = true
     override func viewDidLoad() {
         super.viewDidLoad()
         myTableView.delegate = self
@@ -45,16 +52,50 @@ class TableViewOnline: UIViewController, UITableViewDelegate,UITableViewDataSour
         view_Navbar.layer.shadowOpacity = 1
         view_Navbar.layer.shadowRadius = 2
         
+        btn_showAudio.layer.cornerRadius = btn_showAudio.frame.height/2
+        btn_showAudio.layer.shadowOffset = CGSize.zero
+        btn_showAudio.layer.shadowColor = UIColor.black.cgColor
+        btn_showAudio.layer.shadowOpacity = 1
+        btn_showAudio.layer.shadowRadius = 1
+        btn_showAudio.imageEdgeInsets = UIEdgeInsets(top: 7, left: 7, bottom: 7, right: 7)
+
         
         NotificationCenter.default.addObserver(self, selector: #selector(songDidReachEnd), name: NSNotification.Name(rawValue: "songDidReachEnd"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(shufflingSongs), name: NSNotification.Name(rawValue: "shufflingSongs"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(prevSong), name: NSNotification.Name(rawValue: "prevSong"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(hideAudioPlayer), name: NSNotification.Name(rawValue: "hideAudioPlayer"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showAudioPlayer), name: NSNotification.Name(rawValue: "showAudioPlayer"), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         UIApplication.shared.statusBarStyle = .lightContent
+        self.myTableView.reloadData()
     }
     
+    func hideAudioPlayer(){
+        if isUp {
+            isUp = false
+            UIView.animate(withDuration: 0.3) {
+                self.constraintHeight.constant = 0
+                self.view.layoutIfNeeded()
+            }
+        }
+        
+    }
+    
+    
+    
+    @IBAction func showAudioPlayer(_ sender: UIButton){
+        if !isUp {
+            isUp = true
+            UIView.animate(withDuration: 0.3) {
+                self.constraintHeight.constant = 170
+                self.view.layoutIfNeeded()
+            }
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "showAudioPlayer"), object: nil)
+        }
+        
+    }
     
     @IBAction func actionPreWeek(_ sender: UIButton) {
         if currentWeek > 0 {
@@ -121,7 +162,11 @@ class TableViewOnline: UIViewController, UITableViewDelegate,UITableViewDataSour
                     let lyricJson = self.convertStringToDictionary(text: lyricData)
                     if (json != nil)
                     {
-                        self.addSongToList(json!, lyricJson!)
+                        if lyricJson != nil {
+                            self.addSongToList(json!, lyricJson!)
+                        } else {
+                            self.addSongToList(json!, ["":"" as AnyObject])
+                        }
                     }
                 })
             }
