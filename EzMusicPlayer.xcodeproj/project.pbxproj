@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		91FFCF201EC93F5600DF9B33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFCF1F1EC93F5600DF9B33 /* AppDelegate.swift */; };
+		91FFCF221EC93F5600DF9B33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFCF211EC93F5600DF9B33 /* ViewController.swift */; };
+		91FFCF251EC93F5600DF9B33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FFCF231EC93F5600DF9B33 /* Main.storyboard */; };
+		91FFCF271EC93F5600DF9B33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91FFCF261EC93F5600DF9B33 /* Assets.xcassets */; };
+		91FFCF2A1EC93F5600DF9B33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FFCF281EC93F5600DF9B33 /* LaunchScreen.storyboard */; };
+		91FFCF351EC93F5600DF9B33 /* EzMusicPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFCF341EC93F5600DF9B33 /* EzMusicPlayerTests.swift */; };
+		91FFCF401EC93F5600DF9B33 /* EzMusicPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFCF3F1EC93F5600DF9B33 /* EzMusicPlayerUITests.swift */; };
+		91FFCF501EC9430700DF9B33 /* song1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 91FFCF4D1EC9430700DF9B33 /* song1.mp3 */; };
+		91FFCF511EC9430700DF9B33 /* song2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 91FFCF4E1EC9430700DF9B33 /* song2.mp3 */; };
+		91FFCF521EC9430700DF9B33 /* song3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 91FFCF4F1EC9430700DF9B33 /* song3.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		91FFCF311EC93F5600DF9B33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91FFCF141EC93F5600DF9B33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91FFCF1B1EC93F5600DF9B33;
+			remoteInfo = EzMusicPlayer;
+		};
+		91FFCF3C1EC93F5600DF9B33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91FFCF141EC93F5600DF9B33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91FFCF1B1EC93F5600DF9B33;
+			remoteInfo = EzMusicPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		91FFCF1C1EC93F5600DF9B33 /* EzMusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EzMusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91FFCF1F1EC93F5600DF9B33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		91FFCF211EC93F5600DF9B33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		91FFCF241EC93F5600DF9B33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		91FFCF261EC93F5600DF9B33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		91FFCF291EC93F5600DF9B33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		91FFCF2B1EC93F5600DF9B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91FFCF301EC93F5600DF9B33 /* EzMusicPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EzMusicPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		91FFCF341EC93F5600DF9B33 /* EzMusicPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EzMusicPlayerTests.swift; sourceTree = "<group>"; };
+		91FFCF361EC93F5600DF9B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91FFCF3B1EC93F5600DF9B33 /* EzMusicPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EzMusicPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		91FFCF3F1EC93F5600DF9B33 /* EzMusicPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EzMusicPlayerUITests.swift; sourceTree = "<group>"; };
+		91FFCF411EC93F5600DF9B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91FFCF4D1EC9430700DF9B33 /* song1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song1.mp3; sourceTree = "<group>"; };
+		91FFCF4E1EC9430700DF9B33 /* song2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song2.mp3; sourceTree = "<group>"; };
+		91FFCF4F1EC9430700DF9B33 /* song3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song3.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91FFCF191EC93F5600DF9B33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91FFCF2D1EC93F5600DF9B33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91FFCF381EC93F5600DF9B33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		91FFCF131EC93F5600DF9B33 = {
+			isa = PBXGroup;
+			children = (
+				91FFCF1E1EC93F5600DF9B33 /* EzMusicPlayer */,
+				91FFCF331EC93F5600DF9B33 /* EzMusicPlayerTests */,
+				91FFCF3E1EC93F5600DF9B33 /* EzMusicPlayerUITests */,
+				91FFCF1D1EC93F5600DF9B33 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		91FFCF1D1EC93F5600DF9B33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91FFCF1C1EC93F5600DF9B33 /* EzMusicPlayer.app */,
+				91FFCF301EC93F5600DF9B33 /* EzMusicPlayerTests.xctest */,
+				91FFCF3B1EC93F5600DF9B33 /* EzMusicPlayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91FFCF1E1EC93F5600DF9B33 /* EzMusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				91FFCF531EC94F1200DF9B33 /* Resource */,
+				91FFCF1F1EC93F5600DF9B33 /* AppDelegate.swift */,
+				91FFCF211EC93F5600DF9B33 /* ViewController.swift */,
+				91FFCF231EC93F5600DF9B33 /* Main.storyboard */,
+				91FFCF261EC93F5600DF9B33 /* Assets.xcassets */,
+				91FFCF281EC93F5600DF9B33 /* LaunchScreen.storyboard */,
+				91FFCF2B1EC93F5600DF9B33 /* Info.plist */,
+			);
+			path = EzMusicPlayer;
+			sourceTree = "<group>";
+		};
+		91FFCF331EC93F5600DF9B33 /* EzMusicPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				91FFCF341EC93F5600DF9B33 /* EzMusicPlayerTests.swift */,
+				91FFCF361EC93F5600DF9B33 /* Info.plist */,
+			);
+			path = EzMusicPlayerTests;
+			sourceTree = "<group>";
+		};
+		91FFCF3E1EC93F5600DF9B33 /* EzMusicPlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				91FFCF3F1EC93F5600DF9B33 /* EzMusicPlayerUITests.swift */,
+				91FFCF411EC93F5600DF9B33 /* Info.plist */,
+			);
+			path = EzMusicPlayerUITests;
+			sourceTree = "<group>";
+		};
+		91FFCF531EC94F1200DF9B33 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				91FFCF5A1EC94F2700DF9B33 /* Music */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		91FFCF5A1EC94F2700DF9B33 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				91FFCF4D1EC9430700DF9B33 /* song1.mp3 */,
+				91FFCF4E1EC9430700DF9B33 /* song2.mp3 */,
+				91FFCF4F1EC9430700DF9B33 /* song3.mp3 */,
+			);
+			name = Music;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		91FFCF1B1EC93F5600DF9B33 /* EzMusicPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91FFCF441EC93F5600DF9B33 /* Build configuration list for PBXNativeTarget "EzMusicPlayer" */;
+			buildPhases = (
+				91FFCF181EC93F5600DF9B33 /* Sources */,
+				91FFCF191EC93F5600DF9B33 /* Frameworks */,
+				91FFCF1A1EC93F5600DF9B33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EzMusicPlayer;
+			productName = EzMusicPlayer;
+			productReference = 91FFCF1C1EC93F5600DF9B33 /* EzMusicPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		91FFCF2F1EC93F5600DF9B33 /* EzMusicPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91FFCF471EC93F5600DF9B33 /* Build configuration list for PBXNativeTarget "EzMusicPlayerTests" */;
+			buildPhases = (
+				91FFCF2C1EC93F5600DF9B33 /* Sources */,
+				91FFCF2D1EC93F5600DF9B33 /* Frameworks */,
+				91FFCF2E1EC93F5600DF9B33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91FFCF321EC93F5600DF9B33 /* PBXTargetDependency */,
+			);
+			name = EzMusicPlayerTests;
+			productName = EzMusicPlayerTests;
+			productReference = 91FFCF301EC93F5600DF9B33 /* EzMusicPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		91FFCF3A1EC93F5600DF9B33 /* EzMusicPlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91FFCF4A1EC93F5600DF9B33 /* Build configuration list for PBXNativeTarget "EzMusicPlayerUITests" */;
+			buildPhases = (
+				91FFCF371EC93F5600DF9B33 /* Sources */,
+				91FFCF381EC93F5600DF9B33 /* Frameworks */,
+				91FFCF391EC93F5600DF9B33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91FFCF3D1EC93F5600DF9B33 /* PBXTargetDependency */,
+			);
+			name = EzMusicPlayerUITests;
+			productName = EzMusicPlayerUITests;
+			productReference = 91FFCF3B1EC93F5600DF9B33 /* EzMusicPlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91FFCF141EC93F5600DF9B33 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Moza;
+				TargetAttributes = {
+					91FFCF1B1EC93F5600DF9B33 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
+					91FFCF2F1EC93F5600DF9B33 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 91FFCF1B1EC93F5600DF9B33;
+					};
+					91FFCF3A1EC93F5600DF9B33 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 91FFCF1B1EC93F5600DF9B33;
+					};
+				};
+			};
+			buildConfigurationList = 91FFCF171EC93F5600DF9B33 /* Build configuration list for PBXProject "EzMusicPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 91FFCF131EC93F5600DF9B33;
+			productRefGroup = 91FFCF1D1EC93F5600DF9B33 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91FFCF1B1EC93F5600DF9B33 /* EzMusicPlayer */,
+				91FFCF2F1EC93F5600DF9B33 /* EzMusicPlayerTests */,
+				91FFCF3A1EC93F5600DF9B33 /* EzMusicPlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		91FFCF1A1EC93F5600DF9B33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91FFCF2A1EC93F5600DF9B33 /* LaunchScreen.storyboard in Resources */,
+				91FFCF521EC9430700DF9B33 /* song3.mp3 in Resources */,
+				91FFCF271EC93F5600DF9B33 /* Assets.xcassets in Resources */,
+				91FFCF251EC93F5600DF9B33 /* Main.storyboard in Resources */,
+				91FFCF501EC9430700DF9B33 /* song1.mp3 in Resources */,
+				91FFCF511EC9430700DF9B33 /* song2.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91FFCF2E1EC93F5600DF9B33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91FFCF391EC93F5600DF9B33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91FFCF181EC93F5600DF9B33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91FFCF221EC93F5600DF9B33 /* ViewController.swift in Sources */,
+				91FFCF201EC93F5600DF9B33 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91FFCF2C1EC93F5600DF9B33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91FFCF351EC93F5600DF9B33 /* EzMusicPlayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91FFCF371EC93F5600DF9B33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91FFCF401EC93F5600DF9B33 /* EzMusicPlayerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		91FFCF321EC93F5600DF9B33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91FFCF1B1EC93F5600DF9B33 /* EzMusicPlayer */;
+			targetProxy = 91FFCF311EC93F5600DF9B33 /* PBXContainerItemProxy */;
+		};
+		91FFCF3D1EC93F5600DF9B33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91FFCF1B1EC93F5600DF9B33 /* EzMusicPlayer */;
+			targetProxy = 91FFCF3C1EC93F5600DF9B33 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		91FFCF231EC93F5600DF9B33 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91FFCF241EC93F5600DF9B33 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		91FFCF281EC93F5600DF9B33 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91FFCF291EC93F5600DF9B33 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		91FFCF421EC93F5600DF9B33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		91FFCF431EC93F5600DF9B33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		91FFCF451EC93F5600DF9B33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EzMusicPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tek4Fun.EzMusicPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		91FFCF461EC93F5600DF9B33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EzMusicPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tek4Fun.EzMusicPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		91FFCF481EC93F5600DF9B33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EzMusicPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tek4Fun.EzMusicPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EzMusicPlayer.app/EzMusicPlayer";
+			};
+			name = Debug;
+		};
+		91FFCF491EC93F5600DF9B33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EzMusicPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tek4Fun.EzMusicPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EzMusicPlayer.app/EzMusicPlayer";
+			};
+			name = Release;
+		};
+		91FFCF4B1EC93F5600DF9B33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = EzMusicPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tek4Fun.EzMusicPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = EzMusicPlayer;
+			};
+			name = Debug;
+		};
+		91FFCF4C1EC93F5600DF9B33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = EzMusicPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tek4Fun.EzMusicPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = EzMusicPlayer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91FFCF171EC93F5600DF9B33 /* Build configuration list for PBXProject "EzMusicPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91FFCF421EC93F5600DF9B33 /* Debug */,
+				91FFCF431EC93F5600DF9B33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91FFCF441EC93F5600DF9B33 /* Build configuration list for PBXNativeTarget "EzMusicPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91FFCF451EC93F5600DF9B33 /* Debug */,
+				91FFCF461EC93F5600DF9B33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		91FFCF471EC93F5600DF9B33 /* Build configuration list for PBXNativeTarget "EzMusicPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91FFCF481EC93F5600DF9B33 /* Debug */,
+				91FFCF491EC93F5600DF9B33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		91FFCF4A1EC93F5600DF9B33 /* Build configuration list for PBXNativeTarget "EzMusicPlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91FFCF4B1EC93F5600DF9B33 /* Debug */,
+				91FFCF4C1EC93F5600DF9B33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 91FFCF141EC93F5600DF9B33 /* Project object */;
+}
