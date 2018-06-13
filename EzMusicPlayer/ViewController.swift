@@ -68,8 +68,6 @@ class ViewController: UIViewController,AVAudioPlayerDelegate, UIScrollViewDelega
         designView.layer.shadowColor = UIColor.black.cgColor
         designView.layer.shadowOpacity = 1
         designView.layer.shadowRadius = 2
-//        controllBar.bringSubview(toFront: infoBar)
-//        designView.bringSubview(toFront: infoBar)
         designView.transform = CGAffineTransform(rotationAngle: CGFloat(-0.785398163))
         
         let designLabel = UILabel()
@@ -111,7 +109,7 @@ class ViewController: UIViewController,AVAudioPlayerDelegate, UIScrollViewDelega
         if view.layer.animation(forKey: kRotationAnimationKey) == nil {
             let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
             rotationAnimation.fromValue = currentDegree
-            rotationAnimation.toValue = Float(M_PI * 2.0)
+            rotationAnimation.toValue = Float(.pi * 2.0)
             rotationAnimation.duration = duration
             rotationAnimation.repeatCount = Float.infinity
             view.layer.add(rotationAnimation, forKey: kRotationAnimationKey)
@@ -194,7 +192,6 @@ class ViewController: UIViewController,AVAudioPlayerDelegate, UIScrollViewDelega
             }
         } else {
             let randomNumber = randomSong()
-            print(randomNumber)
             scrollView_img.setContentOffset(CGPoint(x:self.scrollView_img.frame.size.width * CGFloat(randomNumber), y:0), animated: true)
             updateLabel(index: randomNumber)
             playSong(index: randomNumber)
@@ -204,7 +201,7 @@ class ViewController: UIViewController,AVAudioPlayerDelegate, UIScrollViewDelega
     
     func randomSong() -> Int {
         var randomNumber = arc4random_uniform(UInt32(songList.count))
-        while songNumber == Int(randomNumber - 1) {
+        while songNumber == Int(randomNumber) {
             randomNumber = arc4random_uniform(UInt32(songList.count))
         }
         return Int(randomNumber)
